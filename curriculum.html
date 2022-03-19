@@ -1,18 +1,83 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <style>
+        body {
+            background: rgb(204, 204, 204);
+            font-size: 12px;
+        }
+
+        .profile img {
+            max-width: 3cm;
+            border-radius: 50%;
+            float: right;
+        }
+
+        .profile .data {
+            float: left;
+            width: 12cm;
+        }
+
+        .profile a {
+            color: lightslategray;
+        }
+
+        .content {
+            padding: 2cm;
+        }
+
+        .profile {
+            display: inline-block;
+            clear: left;
+        }
+
+        ul {
+            list-style-type:disc;
+        }
+
+        page {
+            background: white;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        }
+
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
+        }
+
+        page[size="A4"][layout="landscape"] {
+            width: 29.7cm;
+            height: 21cm;
+        }
+
+        @media print {
+
+            body,
+            page {
+                margin: 0;
+                box-shadow: 0;
+            }
+        }
+    </style>
     <title>Richard A. Bringmann | Curriculum</title>
+
 </head>
 
-<body style="background-color: lightgray">
-    <page style="text-align: justify">
-        <div style="background-color: white; size: 7in 9.25in; margin: 27mm 16mm 27mm 16mm; padding: 10rem; box-shadow: 10px 10px gray;">
-            <div>
-                <img src="./my_profile_picture.jpeg" style="border-radius: 50%; width: 200px; position: absolute; top: 50mm; right: 50mm">    
-                <h1>Richard Andrey Bringmann</h1>   
-                <a href="mailto:richardbringmann160301@gmail.com" target="_blank" >
-                    <p>richardbringmann160301@gmail.com</p>
-                </a>           
+<body>
+    <page size="A4">
+        <div class="content">
+            <div class="profile">
+                <img src="./my_profile_picture.jpeg">
+                <div class="data">
+                    <h1>Richard Andrey Bringmann</h1>
+                    <a href="mailto:richardbringmann160301@gmail.com" target="_blank">
+                        <p>richardbringmann160301@gmail.com</p>
+                    </a>
+                </div>
             </div>
             <div>
             </div>
@@ -20,17 +85,18 @@
                 <h3>CV Highlights</h3>
                 <p>
                 <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget tellus ac mi rhoncus convallis ac mattis libero.
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget tellus ac mi rhoncus
+                        convallis ac mattis libero.
                         Pellentesque tempor eu mauris auctor tempor.</li>
-                    <li>Donec ipsum sapien, blandit sit amet lectus et, maximus fringilla neque. Nunc vitae elementum mauris, nec laoreet risus</li>
+                    <li>Donec ipsum sapien, blandit sit amet lectus et, maximus fringilla neque. Nunc vitae elementum
+                        mauris, nec laoreet risus</li>
                     <li>Nunc viverra congue ornare. In euismod turpis neque, sit amet euismod erat feugiat a</li>
-                    <li>Mauris risus ante, imperdiet et nunc sit amet, viverra luctus lacus. Proin vel dui in augue venenatis congue vitae in mauris. Etiam eget mattis odio. </li>
+                    <li>Mauris risus ante, imperdiet et nunc sit amet, viverra luctus lacus. Proin vel dui in augue
+                        venenatis congue vitae in mauris. Etiam eget mattis odio. </li>
                 </ul>
                 </p>
                 <h3>Professional Experience</h3>
-                <h4>Company A</h4>
-                <p>Job Name</p>
-                <p>
+                <h4>Company A - Job</h4>
                 <ul>
                     <li>In tempus massa id ultrices imperdiet.</li>
                     <li>Nam consequat est eu finibus finibus.</li>
@@ -40,24 +106,31 @@
                 </p>
                 <h3>Educational Qualifications</h3>
                 <p>
-                    <ul>
-                        <li>
-                            <span>Qualification 1 - In nec tincidunt est, at sagittis libero. Aliquam eleifend sit amet mi et mollis. Etiam porttitor, metus sed bibendum vulputate,
-                                 purus quam lobortis urna, in rhoncus massa nisl vitae odio. </span>
-                        </li>
-                        <li>
-                            <span>Qualification 2 - am et mi diam. Aliquam egestas massa a quam accumsan, quis euismod nunc cursus. Suspendisse porta convallis pellentesque</span>
-                        </li>
-                    </ul>
+                <ul>
+                    <li>
+                        <span>Qualification 1 - In nec tincidunt est, at sagittis libero. Aliquam eleifend sit amet mi
+                            et mollis. Etiam porttitor, metus sed bibendum vulputate,
+                            purus quam lobortis urna, in rhoncus massa nisl vitae odio. </span>
+                    </li>
+                    <li>
+                        <span>Qualification 2 - am et mi diam. Aliquam egestas massa a quam accumsan, quis euismod nunc
+                            cursus. Suspendisse porta convallis pellentesque</span>
+                    </li>
+                </ul>
                 <p>
                 <h3>Independent Courses</h3>
                 <p>
                 <ul>
                     <li>
-                        <span>Course A -  Praesent sit amet nisi eget ligula pellentesque gravida fermentum aliquet tellus</span> – course_site_link.com
+                        <span>
+                            Course A - Praesent sit amet nisi eget ligula pellentesque gravida fermentum aliquet
+                            tellus</span> – course_site_link.com
+                        </span>
                     </li>
                     <li>
-                        <span>Course B - Aenean non nulla nec turpis tempor bibendum. </span> - course_site_link.com
+                        <span>
+                            Course B - Aenean non nulla nec turpis tempor bibendum. </span> - course_site_link.com
+                        </span>
                     </li>
                     <li>
                         <span>Course C - Phasellus consectetur tortor lacinia sodales efficitur </span> -
@@ -67,24 +140,18 @@
                         <span>Course D - Quisque ut lorem lobortis, vehicula quam quis, bibendum lorem.</span> -
                         course_site_link.com
                     </li>
-                    <li>
-                        <span>Course E - Vivamus at est vitae elit mollis gravida ac in tellus.</span> – course_site_link.com
-                    </li>
-                    <li>
-                        <span>Course F - Phasellus ut lacus ultrices, convallis magna sit amet, rutrum sem.</span> - course_site_link.com
-                    </li>
-                    <li>
-                        <span>Course G - ellentesque suscipit dolor sapien, nec feugiat ante convallis ac.</span> - course_site_link.com
                     </li>
                 </ul>
                 <h3>Technical Skills</h3>
                 <p>
                 <ul>
                     <li>
-                        <span>Skill A:</span> Maecenas egestas, purus eu facilisis pulvinar, ex augue lobortis purus, ac ornare diam tellus quis nibh
+                        <span>Skill A:</span> Maecenas egestas, purus eu facilisis pulvinar, ex augue lobortis purus, ac
+                        ornare diam tellus quis nibh
                     </li>
                     <li>
-                        <span>Skill B:</span> Duis in purus quis lacus lacinia ultricies nec eget velit. Suspendisse elementum odio at euismod semper. Nunc et porttitor tortor.
+                        <span>Skill B:</span> Duis in purus quis lacus lacinia ultricies nec eget velit. Suspendisse
+                        elementum odio at euismod semper. Nunc et porttitor tortor.
                     </li>
                     <li>
                         <span>Skill C:</span> Morbi metus nunc, tempor eu nibh in, accumsan ultricies diam.
@@ -94,24 +161,27 @@
 
                 <h3>Languages</h3>
                 <p>
-                    <ul>
-                        <li>
-                            English - Advanced
-                        </li>
-                        <li>
-                            Portuguese - Fluent
-                        </li>
-                    </ul>
+                <ul>
+                    <li>
+                        English - Advanced
+                    </li>
+                    <li>
+                        Portuguese - Fluent
+                    </li>
+                </ul>
                 </p>
                 <h3>Personal Information:</h3>
                 <p>
                 <ul>
                     <li>
-                        Proin dictum orci eget arcu laoreet, a vehicula purus auctor. Morbi vitae ipsum sollicitudin, mattis mi nec, molestie orci.
-                        Vestibulum sed sollicitudin metus, quis porttitor mi. Phasellus sollicitudin elit nibh, nec fermentum lectus tincidunt vitae.
+                        Proin dictum orci eget arcu laoreet, a vehicula purus auctor. Morbi vitae ipsum sollicitudin,
+                        mattis mi nec, molestie orci.
+                        Vestibulum sed sollicitudin metus, quis porttitor mi. Phasellus sollicitudin elit nibh, nec
+                        fermentum lectus tincidunt vitae.
                         Sed aliquet magna quis felis porta lobortis.
                     <li>
-                        <span>Hobbies:</span>Nullam blandit, quam eu ultricies tempus, urna mi ullamcorper tellus, vitae dignissim tortor diam vel eros
+                        <span>Hobbies:</span>Nullam blandit, quam eu ultricies tempus, urna mi ullamcorper tellus, vitae
+                        dignissim tortor diam vel eros
                     </li>
                 </ul>
                 </p>
@@ -122,8 +192,9 @@
                         <span>Expected Salary:</span> As per company standards
                     </li>
                     <li>
-                        <span>Area of Interest:</span> Nulla aliquet est sapien, quis pulvinar libero venenatis non. Aenean vestibulum ipsum ac lacinia eleifend.
-                         Cras vestibulum purus a nisl malesuada, dignissim ornare tellus mollis.
+                        <span>Area of Interest:</span> Nulla aliquet est sapien, quis pulvinar libero venenatis non.
+                        Aenean vestibulum ipsum ac lacinia eleifend.
+                        Cras vestibulum purus a nisl malesuada, dignissim ornare tellus mollis.
                     </li>
                     <li>
                         <span>Joining Date:</span> Immediate
